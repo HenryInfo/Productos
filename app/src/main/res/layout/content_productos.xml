@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:focusable="false"
+        android:id="@+id/conte"
+        android:elevation="5dp">
+        <com.unc.hbs.productos.DontPressWhenPressParentCheckBox
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox"
+            android:layout_marginTop="40dp"
+            android:focusable="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#ffffff"
+            />
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:id="@+id/parentPanel"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:focusable="false"
+            >
+            <TextView
+                android:id="@+id/Nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:focusable="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:text="Poteito"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+
+            android:layout_marginTop="30dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/Precio"
+                android:layout_width="wrap_content"
+                android:focusable="false"
+                android:layout_height="wrap_content"
+                android:text="Precio:"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/textPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio"
+                android:focusable="false"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <com.unc.hbs.productos.RoundedImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:focusable="false"
+            android:layout_height="100dp"
+            android:cropToPadding="true"
+            android:src="@drawable/camote"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="10dp"
+            android:elevation="50dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
