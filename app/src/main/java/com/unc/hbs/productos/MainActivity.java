@@ -1,13 +1,19 @@
 package com.unc.hbs.productos;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.unc.hbs.productos.Model.DBAdapter;
 import com.unc.hbs.productos.Model.Producto;
+import com.unc.hbs.productos.Model.Usuario;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         resultado= (TextView) findViewById(R.id.resultado);
         listView=(ListView)findViewById(R.id.content);
         listView.setAdapter(new CustomArrayAdapter(this, lista, resultado));
-        listView.setItemChecked(3,true);
+
 
     }
 
