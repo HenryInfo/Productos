@@ -62,16 +62,50 @@
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/email_sign_in_button"
-                style="?android:textAppearanceSmall"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
-                android:textStyle="bold" />
+                android:visibility="invisible"
+                android:id="@+id/Input">
 
+                <EditText
+                    android:id="@+id/nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_newnombre"
+                    android:imeActionId="@+id/login"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <Button
+                    android:id="@+id/cancel"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Cancelar"
+                    android:textStyle="bold"
+                    android:enabled="true" />
+
+                <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/action_sign_in"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
